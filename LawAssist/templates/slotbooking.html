@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Deed Presentation Slot Booking</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    {% include './includes/navbar.html' %}
+    <div class="container">
+        <div class="form-container">
+    <h1>Deed Presentation Slot Booking</h1>
+    <form method="post" action="/slot_booking_form/">
+        {% csrf_token %}
+        <label for="first_party_name">Name of the First Party:</label>
+        <input type="text" id="first_party_name" name="first_party_name" placeholder="Enter Name" required><br><br>
+
+        <label for="first_party_id_proof">ID Proof of First Party:</label>
+        <select id="first_party_id_proof" name="first_party_id_proof_type" required>
+            <option value="">--Select ID Proof--</option>
+            <option value="aadhaar">Aadhaar Card</option>
+            <option value="pan">PAN Card</option>
+        </select>
+        <input type="text" id="first_party_id_proof_number" name="first_party_id_proof_number" placeholder="Enter ID Proof Number" required><br><br>
+
+        <label for="second_party_name">Name of the Second Party:</label>
+        <input type="text" id="second_party_name" name="second_party_name" placeholder="Enter Name" required><br><br>
+
+        <label for="second_party_id_proof">ID Proof of Second Party:</label>
+        <select id="second_party_id_proof" name="second_party_id_proof_type" required>
+            <option value="">--Select ID Proof--</option>
+            <option value="aadhaar">Aadhaar Card</option>
+            <option value="pan">PAN Card</option>
+        </select>
+        <input type="text" id="second_party_id_proof_number" name="second_party_id_proof_number" placeholder="Enter ID Proof Number" required><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="timeSlot">Time Slot:</label>
+        <input type="text" id="timeSlot" name="timeSlot" required><br><br>
+
+
+
+        {% comment %} <label for="registration_office_link">Know your Registration Office:</label>
+        <a href="#" target="_blank">Click here</a><br><br> {% endcomment %}
+
+        <label for="district">District : </label>
+        <select id="district" name="district" required>
+            <option value="">--Select District--</option>
+            <option value="Balod">Balod</option>
+            <option value="Baloda_Bazar">Baloda Bazar</option>
+            <option value="Balrampur">Balrampur</option>
+            <option value="Bastar">Bastar</option>
+            <option value="Bemetara">Bemetara</option>
+            <option value="Bijapur">Bijapur</option>
+            <option value="Bilaspur">Bilaspur</option>
+            <option value="Dantewada">Dantewada</option>
+            <option value="Dhamtari">Dhamtari</option>
+            <option value="Durg">Durg</option>
+            <option value="Gariaband">Gariaband</option>
+            <option value="Janjgir_Champa">Janjgir-Champa</option>
+            <option value="Jashpur">Jashpur</option>
+            <option value="Kanker">Kanker</option>
+            <option value="Kawardha">Kawardha</option>
+            <option value="Kondagaon">Kondagaon</option>
+            <option value="Korba">Korba</option>
+            <option value="Korea">Korea</option>
+            <option value="Mahasamund">Mahasamund</option>
+            <option value="Mungeli">Mungeli</option>
+            <option value="Narayanpur">Narayanpur</option>
+            <option value="Raigarh">Raigarh</option>
+            <option value="Raipur">Raipur</option>
+            <option value="Rajnandgaon">Rajnandgaon</option>
+            <option value="Sukma">Sukma</option>
+            <option value="Surajpur">Surajpur</option>
+            <option value="Surguja">Surguja</option>
+
+        </select><br><br>
+
+        <label for="registration_office">Registration Office:</label>
+        <select id="registration_office" name="registration_office" required>
+            <option value="">--Select Registration Office--</option>
+
+            
+        </select><br><br>
+
+        <label for="mobile_number">Mobile Number:</label>
+        <input type="tel" id="mobile_number" name="mobile_number" pattern="[0-9]{10}" required><br><br>
+
+        <input type="submit" value="Book Slot">
+    </form>
+
+    </div>
+    </div>
+
+    <script src="{% static 'JS/slot_booking.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

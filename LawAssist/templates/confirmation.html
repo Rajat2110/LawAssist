@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="{% static 'styles1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Confirmation</h1>
+        <table>
+            <tr>
+                <td>First Party Name:</td>
+                <td><span id="firstPartyName">{{first_party_name}}</span></td>
+            </tr>
+            <tr>
+                <td>Second Party Name:</td>
+                <td><span id="secondPartyName">{{second_party_name}}</span></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><span id="date">{{date}}</span></td>
+            </tr>
+            <tr>
+                <td>Time Slots:</td>
+                <td><span id="timeSlot">{{timeSlot}}</span></td>
+            </tr>
+            <tr>
+                <td>District:</td>
+                <td><span id="districtSelect">{{district}}</span></td>
+            </tr>
+            <tr>
+                <td>Registration Office:</td>
+                <td><span id="registrationOfficeSelect">{{registration_office}}</span></td>
+            </tr>
+            <tr>
+                <td>Booking Status:</td>
+                <td><span id="bookingStatus"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="{% static 'JS/slot_booking.js' %}"></script>
+    <script>
+        // JavaScript code to parse and display query parameters
+        document.addEventListener("DOMContentLoaded", function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            
+            // Get and display query parameters
+            document.getElementById("firstPartyName").textContent = urlParams.get("firstPartyName") || "";
+            document.getElementById("secondPartyName").textContent = urlParams.get("secondPartyName") || "";
+            document.getElementById("date").textContent = urlParams.get("date") || "";
+            document.getElementById("districtSelect").textContent = urlParams.get("districtSelect") || "";
+            document.getElementById("registrationOfficeSelect").textContent = urlParams.get("registrationOfficeSelect") || "";
+            document.getElementById("timeSlot").textContent = urlParams.get("timeSlot") || "";
+            
+            // Display the "Booking Status"
+            var bookingStatus = urlParams.get("bookingStatus") || "";
+            document.getElementById("bookingStatus").textContent = bookingStatus;
+        });
+    </script>
+</body>
+</html>

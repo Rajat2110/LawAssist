@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&display=swap');
+
+@font-face {
+    font-family: 'delio';
+    src: url("/static/fonts/delio.ttf") format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav {
+    font-family: 'Libre Franklin', sans-serif;
+    flex: 1;
+}
+
+.box {
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'delio', sans-serif;
+}
+
+.box p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 420px;
+    text-align: justify;
+}
+
+.first {
+    background-image: url("/static/img/index4.jpg");
+    background-size: cover;
+    padding-left: 12px;
+}
+
+.second {
+    align-items: end;
+    padding-right: 40px;
+    background-color: black;
+    color: white;
+}
+
+.third {
+    background-image: url("/static/img/index5.jpg");
+    background-size: cover;
+    padding-left: 20px;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+footer {
+    color: rgb(144, 141, 141);
+    position:absolute; 
+    left: 50%;
+    text-transform: translate(-50%, 0);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .first {
+        background-image: none;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .third {
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .first {
+        background-image: none;
+        padding: 10px;
+    }
+
+    .second {
+        padding: 10px;
+    }
+
+    .box {
+        width: 390px;
+    }
+
+    .third {
+        padding-left: 10px;
+    }
+}

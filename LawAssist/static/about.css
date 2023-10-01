@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&display=swap');
+
+@font-face {
+    font-family: 'delio';
+    src: url("/static/fonts/delio.ttf") format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    flex: 1;
+}
+
+.content{
+    margin: 30px 20px;
+    width: 480px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    text-transform: translate(-50%, 0);
+}
+
+.about-image {
+    padding-left: 30px;
+}
+
+.content h1{
+    margin-bottom: 60px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.content p {
+    font-size: 18px;
+    font-family: 'Libre Franklin', sans-serif;
+}

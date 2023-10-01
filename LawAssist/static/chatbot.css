@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'delio';
+    src: url("/static/fonts/delio.ttf") format('truetype');
+}
+
+h1 {
+    font-family: 'delio', sans-serif;
+}
+
+/* chatbot.css */
+.chat-container {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #242222;
+    border-radius: 12px;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #212221;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#user-input {
+    width: 70%;
+}
+
+footer {
+    color: rgb(144, 141, 141);
+    position:absolute;
+    bottom: 0; 
+    left: 50%;
+    text-transform: translate(-50%, 0);
+    text-align: center;
+}
+
+button {
+    width: 28%;
+}
+
+.navbar-nav {
+    flex: 1;
+}

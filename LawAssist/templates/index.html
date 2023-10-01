@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'index.css' %}">
+</head>
+<body>
+  {% include './includes/navbar.html' %}
+
+  <div class="container-fluid box first">
+    <a style="text-decoration: none; color: black;" href="/simplify"><h1>Document Simplifier</h1></a>
+    <p><b>Legal documentation made simple. LawAssist empowers you to handle legal documentation efficiently,
+       understand legal documents better, and access legal expertise when needed.</b></p>
+  </div>
+
+  <div class="container-fluid box second">
+    <a style="text-decoration: none; color: white;" href="/cbt"><h1>Seek legal assistance</h1></a>
+    <p>One of the key features of the AI-powered legal assistant is the option for users to seek legal 
+       advice or assistance from a qualified legal expert in case they encounter complex legal issues or
+       require personalized guidance.</p>
+  </div>
+
+  <div class="container-fluid box third">
+    <a style="text-decoration: none; color: black;" href="/slot_booking"><h1>Slot booking for sale-deeds</h1></a>
+    <p><b>LawAssist provides a user-friendly, efficient, and transparent way for property buyers, sellers, agents, and
+       notaries to schedule and manage appointments for document verification and signing during the sale deed process.</b></p>
+  </div>
+
+  {% include './includes/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

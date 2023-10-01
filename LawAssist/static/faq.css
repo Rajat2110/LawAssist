@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.navbar-nav {
+    flex: 1;
+}
+
+.container h1 {
+    margin: 20px auto; 
+}
+
+.faq {
+    margin-bottom: 20px;
+}
